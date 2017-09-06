@@ -1,0 +1,69 @@
+using System;
+
+
+
+namespace ex02c
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("Calculates the numeric average and the letter grade of tests.");
+
+            Console.WriteLine("Please enter the test grades, and -1 to calculate: ");
+
+            int curGrade = 0;
+
+            int curTest = 0;
+
+            int sumOfGrades = 0;
+
+            double avgOfTests = 0.0;
+
+            char letterGrade = 'Z';
+
+            while (true)
+
+            {
+
+                curTest++;
+
+                Console.WriteLine($"Enter the grade for test {curTest}: ");
+
+                curGrade = Convert.ToInt32(Console.ReadLine());
+
+                if (curGrade < 0) break;
+
+                sumOfGrades += curGrade; 
+
+            }
+
+            avgOfTests = sumOfGrades / --curTest;
+
+            if (avgOfTests >= 90) letterGrade = 'A';
+
+            else if (avgOfTests >= 80) letterGrade = 'B';
+
+            else if (avgOfTests >= 70) letterGrade = 'C';
+
+            else if (avgOfTests >= 60) letterGrade = 'D';
+
+            else letterGrade = 'F';
+
+
+
+            Console.WriteLine($"The numeric average is {avgOfTests}");
+
+            Console.WriteLine($"The letter grade is {letterGrade}");
+
+        }
+
+    }
+
+}

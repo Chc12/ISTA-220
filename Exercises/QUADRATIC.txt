@@ -1,0 +1,53 @@
+using System;
+
+
+
+namespace quadratic
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("Solve a quadratic equation given coefficients A, B, and C.");
+
+            int a, b, c;
+
+            double x1, x2, denom, numer1, numer2;
+
+            Console.WriteLine("Enter coefficient A: ");
+
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter coefficient B ");
+
+            b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter coefficient C: ");
+
+            c = Convert.ToInt32(Console.ReadLine());
+
+            denom = 2 * a;
+
+            numer1 = -b + (Math.Sqrt((b * b) - (4 * a * c)));
+
+            numer2 = -b - (Math.Sqrt((b * b) - (4 * a * c)));
+
+            x1 = numer1 / denom;
+
+            x2 = numer2 / denom;
+
+            Console.WriteLine("x1 is " + x1);
+
+            Console.WriteLine("x2 is " + x2);
+
+        }
+
+    }
+
+}

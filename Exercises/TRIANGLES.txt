@@ -1,0 +1,45 @@
+using System;
+
+
+
+namespace triangles
+
+{
+
+    class Program
+
+    {
+
+        static void Main(string[] args)
+
+        {
+
+            Console.WriteLine("Calculate the area of a triangle give the length of the sides  A, B, and C.");
+
+            int a, b, c;
+
+            double area, p;
+
+            Console.WriteLine("Enter the length of side A: ");
+
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the length of side B ");
+
+            b = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter the length of side C: ");
+
+            c = Convert.ToInt32(Console.ReadLine());
+
+            p = (a + b + c) / 2;
+
+            area = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+
+            Console.WriteLine("The area is " + area);
+
+        }
+
+    }
+
+}

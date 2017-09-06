@@ -1,0 +1,9 @@
+﻿1>------ Build started: Project: Cards, Configuration: Debug x86 ------
+1>C:\Users\Christopher Casale\Desktop\Microsoft Press\VCSBS\Chapter 10\Cards\Cards\MainPage.xaml.cs(63,17,63,32): warning CS4014: Because this call is not awaited, execution of the current method continues before the call is completed. Consider applying the 'await' operator to the result of the call.
+1>  Cards -> C:\Users\Christopher Casale\Desktop\Microsoft Press\VCSBS\Chapter 10\Cards\Cards\bin\x86\Debug\Cards.exe
+2>------ Deploy started: Project: Cards, Configuration: Debug x86 ------
+2>Updating the layout...
+2>Copying files: Total <1 mb to layout...
+2>Deployment complete (0:00:01.148). Full package name: "615c1437-17c7-4d34-9ed7-c9ecb9435030_1.0.0.0_x86__k96968rvhjvje"
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Deploy: 1 succeeded, 0 failed, 0 skipped ==========
