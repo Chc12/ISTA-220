@@ -1,0 +1,33 @@
+LP-13 CH11
+
+Christopher Casale
+
+
+1. How do you define a method that takes an arbitrary number of arguments?
+   Using a paramed array to pass a varible number of arguments.
+{public static int Exeample (param int[] paramlist
+{
+-
+}
+
+2. How do you call a method that takes an arbitrary number of argiments?
+   Integer literals.
+EX:(1,2,3,4,5)(alpha,bravo,charlie,delta.)
+
+3. Why can’t you use an array to pass an arbitrary number of 
+arguments to a method?
+   Because the size is fixed.
+
+4. How many parameters can a method have?
+   As many as the machine can handle.
+
+5. Do parameter arguments have to have the same type?
+   Yes, they have to be the same you gerneraly can not mix types.
+
+6. What is the diference between a method that takes a 
+parameter argument and one that takes optional arguments?
+   It has a limited number.
+
+7. How do you define a method that takes diferent 
+(and arbitrary) types of arguments?
+   By usuing your object.
