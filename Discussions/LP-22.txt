@@ -1,0 +1,98 @@
+Lesson Plan 22, ISTA-220 Cohort 3
+Chapter 16, C# Step by Step
+September 12, 2017
+
+Discussion Questions
+Chapter 16, pages 329 – 352
+
+1. Give ?ve examples (using valid C# code) of the ?ve bitwise operators listed in the text.
+-The NOT (~) operator This is a unary operator that performs a bitwise complement. For
+example, if you take the 8-bit value 11001100 (204 decimal) and apply the ~ operator to it,
+you obtain the result 00110011 (51 decimal)—all the 1s in the original value become 0s, and
+all the 0s become 1s.
+-The left-shift (<<) operator This is a binary operator that performs a left shift. The expres-
+sion 204 << 2 returns the value 48. (In binary, 204 decimal is 11001100, and shifting it left
+by two places yields 00110000, or 48 decimal.) The far-left bits are discarded, and zeros are
+introduced from the right. There is a corresponding right-shift operator (>>).
+-The OR (|) operator This is a binary operator that performs a bitwise OR operation,
+returning a value containing a 1 in each position in which either of the operands has a 1.
+For example, the expression 204 | 24 has the value 220 (204 is 11001100, 24 is 00011000,
+and 220 is 11011100).
+-The AND (&) operator This operator performs a bitwise AND operation. AND is similar to
+the bitwise OR operator, but it returns a value containing a 1 in each position where both of
+the operands have a 1. So, 204 & 24 is 8 (204 is 11001100, 24 is 00011000, and 8 is 00001000).
+-The XOR (^) operator This operator performs a bitwise exclusive OR operation, returning
+a 1 in each bit where there is a 1 in one operand or the other but not both. (Two 1s yield a
+0—this is the “exclusive” part of the operator.) So 204 ^ 24 is 212 (11001100 ^ 00011000 is
+11010100).
+
+2. Does C# implement the right-shift (>>) operator? If so, give an example of its operation using valie C# code.
+The right shift operator is two consecutive greater than operators (>>) that takes an integer argument and 
+shits the bits that many places to the right. The rightmost bits are discarded and zeros are added 
+to the left: int x = 150 >> 3; declares an integer type variable x and assigns it the value 18.
+
+3. Explain in detail this code: bits & (1 << index);.
+Suppose that the bits variable contains the decimal value 42. In binary, this is 00101010. The deci-
+mal value 1 is 00000001 in binary, and the expression 1 << 5 has the value 00100000; the sixth bit is
+1. In binary, the expression bits & (1 << 5) is 00101010 & 00100000, and the value of this expression
+is binary 00100000, which is nonzero. If the variable bits contains the value 65, or 01000001 in binary,
+the value of the expression is 01000001 & 00100000, which yields the binary result 00000000, or
+zero.
+
+4. Explain in detail this code: bits |= (1 << index);.
+Similarly, if you want to set the bit at position 6 to 1, you can use the bitwise OR (|) operator. The
+following complicated expression is based on the compound assignment operator |=:
+
+5. Explain in detail this code: bits &= (1 << index);.
+Although they work, they are fiendishly difficult to under-
+stand. They’re complicated, and the solution is a very low-level one: it fails to create an abstraction of
+the problem that it solves, and it is consequently very difficult to maintain code that performs these
+kinds of operations.
+
+6. How does C# interpret this? bool peek = bits[n];
+
+
+7. How does C# interpret this? bits[n] = true;
+
+
+8. How does C# interpret this? bits[n] ^= true;
+
+
+9. Assume that users were assigned read, write, and execute permissions 
+according to this scheme: read = 1, write = 2, execute = 4. How would 
+you interpret the following user permissions:
+(a) permission = 0
+No permissions.
+(b) permission = 1
+Read.
+(c) permission = 2
+Write.
+(d) permission = 3
+Read and Write.
+(e) permission = 4
+Execute.
+(f) permission = 5
+Read and Execute.
+(g) permission = 6
+Write and Execute. 
+(h) permission = 7
+Read, Write, and Execute.
+
+10. Answer the previous question by converting the decimal permissions into binary permissions. 
+What does this tell you about using this shceme of permissions?
+(a) permission = 0
+No permissions/000.
+(b) permission = 1
+Read/001.
+(c) permission = 2
+Write/010.
+(d) permission = 3
+Read and Write/011.
+(e) permission = 4
+Execute/100.
+(f) permission = 5
+Read and Execute/101.
+(g) permission = 6
+Write and Execute/110.
+(h) permission = 7
+Read, Write, and Execute/111.

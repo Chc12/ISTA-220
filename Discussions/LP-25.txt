@@ -1,0 +1,52 @@
+Lesson Plan 25, ISTA-220 Cohort 3
+Chapter 17, C# Step by Step
+September 18, 2017
+1 Discussion Questions
+Chapter 17, pages 369 – 398
+
+1. What is a type parameter?
+In a generic type or method definition, a type parameters is a placeholder 
+for a specific type. 
+
+2. What does a type parameter do?
+That a client specifies when they instantiate a
+variable of the generic type.
+
+3. How many type parameters can a generic class have?
+
+
+4. What is the diference between a generic class and a generalized class?
+
+10
+down vote
+"General" carries a connotation of having broad applicability rather than being limited 
+or specialized in some way that limits applicability. "All-purpose" comes to mind.
+"Generic" connotes an unremarkability or plainness coming from a lack of development 
+towards a specific application. "Vanilla" is used similarly.
+
+5. What is a constraint? How do you specify a constraint?
+A limitation or resrtiction, Constraints can be specified when the table is created with the
+CREATE TABLE statement, or after the table is created with the ALTER TABLE statement.
+Syntax
+CREATE TABLE table_name (
+    column1 datatype constraint,
+    column2 datatype constraint,
+    column3 datatype constraint,
+    ....
+
+6. What is a generic method? How do you define a generic method?
+Generic methods are methods that introduce their own type parameters. This is similar to 
+declaring a generic type, but the type parameter's scope is limited to the method where it is declared. 
+Static and non-static generic methods are allowed, as well as generic class constructors.
+
+7. What do we mean when we say that a generic type interface is invariant?
+
+
+8. What do we mean when we cay that a generic type interface is covariant?
+
+
+9. Does covariance work with value types? Does it work with reference types?
+Variance applies only to reference types; if you specify a value type for a variant type parameter,
+that type parameter is invariant for the resulting constructed type.
+
+10. What do we mean when we cay that a generic type interface is contravariant?
